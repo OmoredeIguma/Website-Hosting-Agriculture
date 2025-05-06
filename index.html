@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #000;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #007acc; /* Set to blue as requested */
+      line-height: 1.6; /* Set to 1.6 as requested */
+      border-radius: 6px;
+      color: #000; /* Ensure text is black */
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000; /* Heading also black */
+    }
+  </style>
+</head>
+<body>
+  <h1>Agricultural Data Analysis</h1>
+  <div class="writeup">
+    <h2>Synopsis</h2>
+    <p>
+      This project explores a crop yield dataset provided on <a href="https://www.kaggle.com/datasets/samuelotiattakorah/agriculture-crop-yield">Kaggle by Samuel Oti Attakorah</a>. 
+      This dataset provides a comprehensive view aimed at predicting crop yield (in tonnes per hectare) based on several factors. 
+      Each entry in the dataset corresponds to a unique crop with its unique profile, such as the region where it was grown, the soil type, the amount of rainfall, etc, offering a detailed breakdown of how these factors could affect yield. 
+      The dataset originally consisted of 1 million rows, but was scaled down to 500 due to technical limitations such as lags and crashes.
+<p> The transformed dataset, raw SPSS Output file, and a Results and Discussions Word document written in APA style, which goes in depth and is more aimed at a technical audience, are presented in my <a href="https://github.com/OmoredeIguma/Agricultural-Data-Analysis" target="_blank">GitHub</a>
+  <p>This website contains the visualizations of the results and a quick and easily digestible summary for a non-technical audience.</p>
+  </div>
+
+  <h1>Region</h1>
+
+  <!-- Tableau Embed -->
+  <div class='tableauPlaceholder' id='viz1746544773251' style='position: relative'>
+    <noscript>
+      <a href='#'>
+        <img alt='Age Category' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ag&#47;Agriculture_17465445782780&#47;Region&#47;1_rss.png' style='border: none' />
+      </a>
+    </noscript>
+    <object class='tableauViz' style='display:none;'>
+      <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+      <param name='embed_code_version' value='3' />
+      <param name='site_root' value='' />
+      <param name='name' value='Agriculture_17465445782780&#47;Region' />
+      <param name='tabs' value='no' />
+      <param name='toolbar' value='yes' />
+      <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ag&#47;Agriculture_17465445782780&#47;Region&#47;1.png' />
+      <param name='animate_transition' value='yes' />
+      <param name='display_static_image' value='yes' />
+      <param name='display_spinner' value='yes' />
+      <param name='display_overlay' value='yes' />
+      <param name='display_count' value='yes' />
+      <param name='language' value='en-GB' />
+      <param name='filter' value='publish=yes' />
+    </object>
+  </div>
+
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1746544773251');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+
+  <!-- Write-up Section -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      A total of 500 observations were analysed. The regional distribution of the data showed that the largest proportion of samples came from the North (32%), 
+      followed by the West (24.4%), South (23%), and East (20.6%).
+    </p>
+  </div>
+
+</body>
+</html>
+
+  <!--Soil Type-->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Soil Type</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+        background-color: #fff;
+        color: #333;
+      }
+  
+      h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+  
+      .tableauPlaceholder {
+        margin-bottom: 30px;
+      }
+  
+      .writeup {
+        background: #f9f9f9;
+        padding: 20px;
+        border-left: 4px solid #007acc; /* Updated to blue */
+        line-height: 1.6; /* Set for better readability */
+        border-radius: 6px;
+        color: #000; /* Set text to black */
+      }
+  
+      .writeup h2 {
+        margin-top: 0;
+        color: #000; /* Heading in black */
+      }
+    </style>
+  </head>
+  <body>
+  
+    <h1>Soil Type</h1>
+  
+    <!-- Tableau Embed -->
+    <div class="tableauPlaceholder" id="viz1746545602030" style="position: relative">
+      <noscript>
+        <a href="#">
+          <img alt="Soil type"
+               src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Soiltype/1_rss.png"
+               style="border: none" />
+        </a>
+      </noscript>
+      <object class="tableauViz" style="display:none;">
+        <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+        <param name="embed_code_version" value="3" />
+        <param name="site_root" value="" />
+        <param name="name" value="Agriculture_17465445782780/Soiltype" />
+        <param name="tabs" value="no" />
+        <param name="toolbar" value="yes" />
+        <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Soiltype/1.png" />
+        <param name="animate_transition" value="yes" />
+        <param name="display_static_image" value="yes" />
+        <param name="display_spinner" value="yes" />
+        <param name="display_overlay" value="yes" />
+        <param name="display_count" value="yes" />
+        <param name="language" value="en-GB" />
+      </object>
+    </div>
+    
+    <script type="text/javascript">
+      var divElement = document.getElementById('viz1746545602030');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      vizElement.style.width = '100%';
+      vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    
+  
+    <!-- Write-up Section -->
+    <div class="writeup">
+      <h2>Summary</h2>
+      <p>
+        Silt was the most commonly used soil type (18%), closely followed by clay (17.8%), loam (17.6%), sandy (16.6%), peaty (15.8%), and chalky (14.2%).
+      </p>
+    </div>
+  
+  </body>
+  </html>
+
+  <!--Crop Grown-->
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Grown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #007acc;
+      border-radius: 6px;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Crop Grown</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746545745928" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Crop grown"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Cropgrown/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/Cropgrown" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Cropgrown/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746545745928');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- Updated Write-up -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      Crop distribution was relatively even, with cotton being the most frequently cultivated (17.8%), and soybeans the least (15%). 
+      Other major crops included rice (17.6%), barley (16.6%), wheat (17.4%), and maize (15.6%).
+    </p>
+  </div>
+
+</body>
+</html>
+
+<!--Fertiliser Used?-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fertiliser Used?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #007acc;
+      border-radius: 6px;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fertiliser Used?</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746545865510" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Fert used"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Fertused/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/Fertused" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Fertused/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746545865510');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- Updated Write-up -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      Approximately half of the fields used fertiliser (49.2%), while the other half did not (50.8%). 
+      Similarly, irrigation was reported in just over half the cases (51.4%), with 48.6% not using irrigation.
+    </p>
+  </div>
+
+</body>
+</html>
+
+<!--Irrigation Used?-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Irrigation Used?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #007acc;
+      border-radius: 6px;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Irrigation Used?</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746545971859" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Irrigation used"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Irrigationused/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/Irrigationused" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Irrigationused/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746545971859');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- Updated Write-up -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      Irrigation was reported in just over half the cases (51.4%), with 48.6% not using irrigation.
+    </p>
+  </div>
+</body>
+</html>
+
+<!--Weather Condition-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Condition</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-top: 20px;
+    }
+
+    .writeup {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #007acc;
+      border-radius: 6px;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Weather Condition</h1>
+
+  <div class="tableauPlaceholder" id="viz1746546095669" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Weather"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Weather/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/Weather" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Weather/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746546095669');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      Weather conditions during the growing period were categorised as sunny (36%), cloudy (34.6%), or rainy (29.4%).
+    </p>
+  </div>
+</body>
+</html>
+
+<!--Summary Statistics-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summary Statistics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #007acc;
+      line-height: 1.6;
+      color: #000;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Summary Statistics</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746546218131" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Summary Stats"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/SummaryStats/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/SummaryStats" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/SummaryStats/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746546218131');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- Write-up Section -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      The average rainfall across all observations was 542.70 mm. Mean temperature was 27.68°C, and the average time to harvest was 105.32 days. 
+      The average yield was 4.65 tons per hectare.
+    </p>
+  </div>
+</body>
+</html>
+
+<!--Total Yield per Crop(tonnes)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Total Yield per Crop(tonnes)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .tableauPlaceholder {
+      margin: 40px auto;
+    }
+
+    .writeup {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      border-left: 4px solid #007acc;
+      line-height: 1.6;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Total Yield per Crop(tonnes)</h1>
+
+  <div class="tableauPlaceholder" id="viz1746546350428" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Total Yield per Crop(tonnes)"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/TotalYieldperCroptonnes/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/TotalYieldperCroptonnes" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/TotalYieldperCroptonnes/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746546350428');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- 📝 Write-up section -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      Rice had the highest yield at 422.78 tonnes. 
+      Cotton followed second with a yield of 404.67. Wheat trailed behind at just 403.32. 
+      Maize was 380.71, Barley had a yield of 365.20, and finally, Soybean had the lowest at 348.59.
+    </p>
+  </div>
+</body>
+</html>
+
+<!--Independent Samples T-Test-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yield per hectare by Fertiliser Used?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-left: 4px solid #007acc;
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Independent Samples T-Test (Yield by Fertiliser Used?)</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746546514643" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Yield vs fert"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Yieldvsfert/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/Yieldvsfert" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Yieldvsfert/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746546514643');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- Write-up Section -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      The box and whisker plot above compares average yield per hectare based on whether a fertiliser was applied. It helps assess whether fertiliser application leads to higher yield per hectare.
+    </p>
+    <p>
+      From this visualization, we can observe that there was a significant difference in average yield obtained for whether fertiliser was used or not. When fertiliser was used, it led to a higher yield compared to when it was not applied.
+    </p>
+  </div>
+
+</body>
+</html>
+
+<!--Independent Samples T-Test (Yield by Irrigation Used?)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Independent Samples T-Test (Yield by Irrigation Used?)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #007acc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Independent Samples T-Test (Yield by Irrigation Used?)</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746546685388" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="Yield vs irri"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Yieldvsirri/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/Yieldvsirri" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/Yieldvsirri/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746546685388');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+
+  <!-- Optional Write-up -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      The box and whisker plot above compares average yield per hectare based on whether a irrigation was employed. It helps assess whether irrigation application leads to higher yield per hectare.
+    </p>
+    <p>
+      From this visualization, we can observe that there was a significant difference in average yield obtained for whether irrigation was used or not. When irrigation was used, it lead to a higher yield compared to when it was not applied.
+    </p>
+  </div>
+
+</body>
+</html>
+
+  <!--Analysis of Variance (Yield by Regions)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analysis of Variance (Yield by Regions)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tableauPlaceholder {
+      margin-bottom: 30px;
+    }
+
+    .writeup {
+      background: #f9f9f9;
+      padding: 20px;
+      border-left: 4px solid #007acc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .writeup h2 {
+      margin-top: 0;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Analysis of Variance (Yield by Regions)</h1>
+
+  <!-- Tableau Embed -->
+  <div class="tableauPlaceholder" id="viz1746546858767" style="position: relative">
+    <noscript>
+      <a href="#">
+        <img alt="ANOVA"
+             src="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/ANOVA/1_rss.png"
+             style="border: none" />
+      </a>
+    </noscript>
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="Agriculture_17465445782780/ANOVA" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/Ag/Agriculture_17465445782780/ANOVA/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-GB" />
+    </object>
+  </div>
+  
+  <script type="text/javascript">
+    var divElement = document.getElementById('viz1746546858767');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    vizElement.style.width = '100%';
+    vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
+  
+  
+
+  <!-- Optional Write-up -->
+  <div class="writeup">
+    <h2>Summary</h2>
+    <p>
+      There was no statistically significant difference between the different regions. 
+      Meaning that the amount of crop yield does not vary across different regions.
+    </p>
+  </div>
+</body>
+</html>
